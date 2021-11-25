@@ -1,0 +1,11 @@
+.header {
+    font-size: 12px;
+    font-weight: 400;
+    margin-top: 52px;
+    padding: 0 180px;
+}
+
+.links_group {
+    display: flex;
+    justify-content: flex-start;
+}
