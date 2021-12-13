@@ -1,0 +1,29 @@
+.card {
+    border-radius: 8px;
+    height: 260px;
+    width: 220px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 14px;
+    padding: 22px 21px;
+    box-sizing: border-box;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.25);
+    &_main {
+        background: rgba(255, 255, 255, 0.65);
+        height: 240px;
+        box-shadow: none;
+    }
+    &_img {
+        display: block;
+        max-height: 134px;
+    }
+    &_location {
+        align-self: end;
+    }
+    &_price {
+        align-self: end;
+        font-weight: bold;
+    }
+}

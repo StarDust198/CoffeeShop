@@ -1,0 +1,32 @@
+.divider {
+    width: 200px;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px auto 0;
+    .line {        
+        width: 60px;
+        height: 2px;
+    }
+    .beans {
+        height: 30px;
+        width: 30px;
+    }
+    &_white {
+        .line {
+            background-color: #fff;
+        }
+        .beans {
+            background: url('../../assets/bright_beans2.svg') center/cover;
+        }
+    }
+    &_black {
+        .line {
+            background-color: #000;
+        }
+        .beans {
+            background: url('../../assets/dark_beans2.svg') center/cover;
+        }
+    }
+}

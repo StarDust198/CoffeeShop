@@ -1,0 +1,29 @@
+.about {
+    min-height: 485px;
+    padding-top: 70px;
+    &_wrapper {
+        display: grid;
+        grid-template-columns: 272px 350px;
+        grid-template-rows: 355px;
+        gap: 85px;
+        margin: 0 auto;
+        justify-content: center;
+    }
+    &_image {
+        filter: drop-shadow(5px 5px 30px rgba(0, 0, 0, 0.25));
+    }
+    &_text {
+        h2 {
+            margin-top: 9px;
+        }
+        p {
+            margin-top: 25px;
+        }
+    }
+    &_line {
+        height: 2px;
+        width: 240px;
+        background-color: #000;
+        margin: 60px auto 0;
+    }
+}

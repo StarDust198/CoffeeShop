@@ -1,0 +1,13 @@
+.best {
+    background: url('../../assets/bg_best.jpg') center/cover;
+    padding: 80px 320px 110px;
+    h2 {
+        font-size: 24px;
+        text-align: center;
+    }
+    .card_group {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 40px;
+    }
+}

@@ -1,0 +1,37 @@
+.links_group {
+    padding-top: 52px;
+    display: flex;
+    justify-content: space-between;
+    width: 355px;
+    .header_link {
+        display: block;
+        font-size: 12px;
+        font-weight: 400;
+        color: #fff;
+        cursor: pointer;
+        &:first-child {
+            position: relative;
+            width: 108px;
+            text-align: right;
+            &::before {
+                content: "";
+                display: block;
+                position: absolute;
+                top: -22px;
+                left: 0;
+                height: 35px;
+                width: 35px;
+                background: url('../../assets/bright_beans1.svg') center/cover;
+            }
+        }
+    }
+    &.dark {
+        margin: 0 auto;
+        .header_link {            
+            color: #000;
+            &:first-child::before{
+                background: url('../../assets/dark_beans1.svg') center/cover;
+            }
+        }
+    }
+}
