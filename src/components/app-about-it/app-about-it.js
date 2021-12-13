@@ -2,14 +2,14 @@ import Title from '../title/title';
 
 import './app-about-it.scss';
 
-const AppAboutIt = ({img, name, country, description, price}) => {
+const AppAboutIt = ({imgBig, name, country, description, price}) => {
     return (
         <>
             <section className="aboutit">
                 <div className="container">
                     <div className="aboutit_wrapper">
                         <div className="aboutit_image">
-                            <img src={img} alt={name}/>
+                            <img src={imgBig} alt={name}/>
                         </div>
                         <div className="aboutit_text">
                             <Title text="About it"/>
