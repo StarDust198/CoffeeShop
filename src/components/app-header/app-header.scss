@@ -19,6 +19,8 @@
         text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     }
     &_btn {
+        font-size: 14px;
+        line-height: 28px;
         width: 120px;
         height: 30px;
         border: 1px solid #fff;
@@ -31,34 +33,35 @@
         font-family: Merienda;
         margin: 18px auto;
         display: block;
+        text-decoration: none;
         cursor: pointer;
     }
     &_page1 {
         background: url('../../assets/bg_main.jpg');
         height: 640px;
         .header_title {
-            margin-top: 111px;
+            padding-top: 181px;
         }
     }
     &_page2 {
         background: url('../../assets/bg1.jpg');
         height: 260px;
         .header_title {
-            margin-top: 60px;
+            padding-top: 120px;
         }
     }
     &_page3 {
         background: url('../../assets/bg2.jpg');
         height: 260px;
         .header_title {
-            margin-top: 60px;
+            padding-top: 120px;
         }
     }
     &_page4 {
         background: url('../../assets/bg1.jpg');
         height: 260px;
         .header_title {
-            margin-top: 60px;
+            padding-top: 120px;
         }
     }
 

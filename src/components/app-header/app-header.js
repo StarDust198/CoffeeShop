@@ -1,41 +1,53 @@
-import Divider from '../divider/divider';
-import LinksGroup from '../links-group/links-group';
+import { Link } from 'react-router-dom';
 
-import './app-header.scss';
+import Divider from '../divider/divider'
 
-const AppHeader = ({page, onPageSelect}) => {
+import './app-header.scss'
+
+const AppHeader = ({page}) => {
     const headerClass = 'header header_page' + (page+1);
-    let headerText = '';
+    let headerText, headerExtraClass
     switch (page) {
         case 0:
-            headerText = 'Everything You Love About Coffee';
+            headerExtraClass = 'shadow'
+            headerText = 'Everything You Love About Coffee'
+            break
         case 1:
-            headerText = 'Our Coffee';
+            headerExtraClass = 'shadow'
+            headerText = 'Our Coffee'
+            break
         case 2:
-            headerText = 'For your pleasure';
+            headerExtraClass = 'shadow'
+            headerText = 'For your pleasure'
+            break
         case 3:
-            headerText = 'Our Coffee';
-    }    
+            headerExtraClass = 'shadow'
+            headerText = 'Our Coffee'
+            break
+        default:
+            break
+    }
 
     return (
         <header className={headerClass}>
             <div className="container">
-                <LinksGroup color='white' onPageSelect={onPageSelect}/>
-                <h1 className={page === 0 ? 'header_title shadow' : 'header_title'}>
+                <h1 className={'header_title ' + headerExtraClass}>
                     {headerText}
                 </h1>
                 {page === 0 ? (
                     <>
                         <Divider color="white"/>
 
-                        <h2 className="header_subtitle">We makes every day full of energy and taste</h2>
+                        <h2 className="header_subtitle">We make every day full of energy and taste</h2>
                         <h2 className="header_subtitle shadow">Want to try our beans?</h2>
-                        <button onClick={() => onPageSelect(1)}className="header_btn">More</button>
+                        <Link to="/coffee" className="header_btn">More</Link>
                     </>
                 ) : null}
             </div>
         </header>
     );
 }
+
+
 
 export default AppHeader;

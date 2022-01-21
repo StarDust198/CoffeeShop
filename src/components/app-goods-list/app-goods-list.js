@@ -2,12 +2,11 @@ import './app-goods-list.scss';
 import Card from '../card/card';
 
 
-const AppGoodsList = ({cardsData, onPageSelect}) => {
+const AppGoodsList = ({cardsData}) => {
     const cards = cardsData.map(({...itemProps}) => {
         return (
             <Card 
-                {...itemProps}
-                onPageSelect={onPageSelect}/>
+                {...itemProps}/>
         )
     })
 

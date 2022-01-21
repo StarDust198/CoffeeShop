@@ -1,33 +1,41 @@
+import { Link } from 'react-router-dom';
+
 import './links-group.scss';
 
-const LinksGroup = ({color, onPageSelect}) => {
+const LinksGroup = ({color, /* onPageSelect */}) => {
     const linksData = [
-        'Coffee house',
-        'Our coffee',
-        'For your pleasure'
+        {
+            name: 'Coffee house',
+            location: '/'
+        },
+        {
+            name: 'Our coffee',
+            location: '/coffee'
+        },
+        {
+            name: 'For your pleasure',
+            location: '/goods'
+        }
     ];
 
-    const links = linksData.map((name, i) => {
+    const links = linksData.map((link, i) => {
         return (
-            <a
+            <Link
+                style={{textDecoration:"none"}}
+                to={link.location}
                 className="header_link"
-                src="#"
-                onClick={(e) => {
-                    e.preventDefault();
-                    onPageSelect(i);
-                }}
                 key={i}>
-                    {name}
-            </a>            
+                    {link.name}
+            </Link>            
         )
     });
 
     const clazz = `links_group${color === "dark" ? ' dark' : ''}`;
 
     return (        
-        <div className={clazz}>
+        <nav className={clazz}>
             {links} 
-        </div>
+        </nav>
     )
 }
 
